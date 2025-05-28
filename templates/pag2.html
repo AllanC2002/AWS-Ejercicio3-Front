@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clima</title>
+</head>
+<body>
+    <p>Ingresa latitud y longitud para obtener el clima</p>
+    <form action="{{ url_for('inicio2') }}" method="POST">
+        <input type="text" name="latitud" placeholder="Latitud" required />
+        <input type="text" name="longitud" placeholder="Longitud" required />
+        <button type="submit">Enviar</button>
+    </form>
+
+    {% if clima %}
+        <p>Temperatura actual: {{ clima }} °C</p>
+    {% else %}
+        <p>No se recibió información del clima.</p>
+    {% endif %}
+</body>
+</html>
