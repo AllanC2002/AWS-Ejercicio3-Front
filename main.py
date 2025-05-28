@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import requests
 
 app = Flask(__name__)
-url_api = "http://localhost:8080"
+url_api = "http://3.85.61.46:8080"
 
 @app.route("/", methods=["GET", "POST"])
 def inicio():
