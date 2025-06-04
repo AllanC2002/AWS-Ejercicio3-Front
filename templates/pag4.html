@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RickandMorty</title>
+</head>
+<body>
+    <p>Ingresa el nombre del personaje a buscar</p>
+    <form action="{{ url_for('inicio4') }}" method="POST">
+        <input type="text" name="character" placeholder="NombrePersonaje" required />
+        <button type="submit">Enviar</button>
+    </form>
+
+    {% if imagen %}
+        <p>Imagen: {{ imagen }}</p>
+        <img src="{{ imagen.url }}" alt="Imagen del personaje" width="200">
+    {% else %}
+        <p>No se ninguna imagen de ese personaje.</p>
+    {% endif %}
+</body>
+</html>
