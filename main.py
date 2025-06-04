@@ -4,6 +4,8 @@ import requests
 app = Flask(__name__)
 url_api = "http://3.85.61.46:8080"
 
+
+
 @app.route("/", methods=["GET", "POST"])
 def inicio():
     pais_data = None
