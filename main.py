@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import requests
 
 app = Flask(__name__)
-back_api = "http://127.0.0.1:8080"
+back_api = "http://18.207.125.47:8080"
 
 
 
